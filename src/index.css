@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+  
+  body {
+    @apply font-sans text-gray-900 antialiased;
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand-green hover:bg-brand-green-dark text-white font-medium px-8 py-3 rounded-full transition-colors duration-200 inline-block text-center;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-brand-green border-2 border-brand-green font-medium px-8 py-3 rounded-full transition-colors duration-200 inline-block text-center;
+  }
+  
+  .section-padding {
+    @apply py-16 lg:py-24;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-lg p-6 border border-gray-100;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-green to-brand-green-dark bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .bg-hero {
+    background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%), 
+                url('https://bc.zp.ua/wp-content/uploads/2019/06/bike-hero-bg.jpg') center/cover no-repeat;
+  }
+}
